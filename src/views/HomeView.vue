@@ -1,7 +1,7 @@
 <template>
   <div class="home">    
     <div class="products">
-      <ProductView v-for="product in Products" :productT="product" :inventory="false"/>
+      <ProductView v-for="product in Products" :key="product.Id" :productT="product"  :inventory="false"/>
     </div>
   </div>
 </template>

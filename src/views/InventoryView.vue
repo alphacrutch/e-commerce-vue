@@ -28,7 +28,7 @@
         <section class="itemList">
             <h2>Inventory</h2>
             <div class="products">
-                <ProductView v-for="item in Products" :productT="item" :inventory="true"/>               
+                <ProductView v-for="item in Products" :key="item.Id" :productT="item" :inventory="true"/>               
                 
             </div>
         </section>
