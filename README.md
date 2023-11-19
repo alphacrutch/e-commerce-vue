@@ -1,4 +1,12 @@
-# e-commerce-vue
+# E-commerce-vue
+This project is an e-commerce website built using Vue.js and Firebase.
+
+# Components
+
+## HomeView
+## SearchBar
+## ProductView
+## InventoryView
 
 ## Project setup
 ```
