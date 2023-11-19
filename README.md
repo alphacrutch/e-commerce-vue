@@ -3,6 +3,7 @@ This project is an e-commerce website built using Vue.js and Firebase.
 
 ## Components
 
+# Home View
 ```
 <template>
   <header>    
