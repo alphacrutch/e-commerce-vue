@@ -1,7 +1,7 @@
 <template>
-  <header>
-    <img src="./assets/shop.png" alt="Logo" >
+  <header>    
     <h1>E-Commerce TT</h1>
+    <SearchBar />
     <nav>
     <router-link to="/">Home</router-link> |
     <router-link :to="{name:'inventory'}">Inventory</router-link> |
@@ -11,32 +11,38 @@
   <router-view/>
 </template>
 
+<script>
+import SearchBar from './components/SearchBar.vue';
+export default{
+components:{SearchBar}
+
+}
+
+</script>
 <style>
 body{
-  margin:0;
-  padding:0;
+  margin:0; 
+  padding:2px;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
 }
 header{
-  background-color: #8a8a8a;
+  background-color: #00bbff;
   display:flex;
   align-items: center;
   justify-content: space-between;
   height:7vh;
+  width:100%;
 }
 
-header img {
-  height:100%;
-  width: 100px;
-}
 nav {
   padding: 30px;
+  width:max-content;
 }
 
 nav a {

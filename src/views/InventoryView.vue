@@ -107,6 +107,9 @@ this.Products=[]
 
 .itemList {
     width: 75%;
+    overflow-y: scroll;
+scroll-behavior: smooth;
+scrollbar-width: 0;
 }
 
 form {
@@ -140,28 +143,8 @@ form input {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  justify-content: center;
   width: 100%;
-}
-.product:hover{
-transform:scale(1.2,1.2);
-background-color: rgb(190, 190, 190);
-}
-.product {
-  padding: 10px 5px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 25%;
-  max-height: 500px;
-  border-radius: 5%;
-  background-color: rgb(225, 225, 225);
-  cursor: pointer;
-}
-
-.product button {
-  width: 50%;
-  height: 15%;
 }
 form button {
     margin-top: 20px;

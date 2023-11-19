@@ -1,9 +1,12 @@
 <template>
   <div class="searchBar">
-    <input type="text" v-model="searchInput" placeholder="Search Products by Name or Brand"/>
-    <button @click="searchItem"> Search </button>
+    <div class="searchInput">
+      <input type="text" v-model="searchInput" placeholder="Search Products by Name or Brand" />
+    </div>
+    <div class="searchImg">
+      <img src="../assets/search.png" :alt="searchPng" @click="searchItem" />
+    </div>
   </div>
-  <p>{{ searchInput }}</p>
 </template>
 
 <script >
@@ -12,7 +15,8 @@ export default {
   data() {
     return {
       searchInput: '',
-      items: []
+      items: [],
+      searchPng: "../assets/search.png"
     };
   },
   methods:
@@ -20,7 +24,7 @@ export default {
     seacrhItem(item) {
 
     },
-    addItem(item){
+    addItem(item) {
 
     }
   }
@@ -30,33 +34,42 @@ export default {
 <style>
 .searchBar {
   display: flex;
+  padding:20px;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: center;
-  background-color: #8a8a8a;
-  width: 100%;
-  height: 3vh;
+  justify-content: space-between;
+  width: 50%;
+  height: 100%;
 }
 
-input {
+.searchInput{
+  width:90%;
+  height:70%;
+}
+.searchImg{
+  width: 10%;
+  height:70%;
+}
+.searchInput input {
   background-color: #eeeeee;
   box-sizing: border-box;
   border: none;
   border-bottom: 1px solid rgb(63, 63, 63);
-  color: #8a8a8a;
-  margin-right: 10px;
-  height: 80%;
-  width: 50%;
+  color: #464646;
+  height: 100%;
+  width: 100%;
   text-align: center;
   font-style: italic;
   font-size: 18px;
 }
 
-button {
-  width: 10%;
+.searchImg img {
+  width: 100%;
   border-style: none;
   border-radius: 5%;
-  height: 80%;
-  background-color: aquamarine;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 </style>

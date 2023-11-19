@@ -1,6 +1,5 @@
 <template>
-  <div class="home">
-    <SearchBar />
+  <div class="home">    
     <div class="products">
       <ProductView v-for="product in Products" :productT="product" :inventory="false"/>
     </div>
@@ -8,8 +7,6 @@
 </template>
 
 <script >
-
-import SearchBar from '../components/SearchBar.vue'
 import ProductView from '@/components/ProductView.vue'
 import { db } from '@/components/firebaseInit'
 import { collection, getDocs } from '@firebase/firestore'
@@ -17,7 +14,7 @@ import { collection, getDocs } from '@firebase/firestore'
 export default {
   name: 'HomeView',
   components: {
-    SearchBar,ProductView
+    ProductView
   },
   mounted() {
     this.getFeatured()
@@ -44,11 +41,11 @@ export default {
 
 <style>
 .products {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  gap: 20px;
-  grid-template-rows: repeat(auto-fill, minmax(600, 1fr));
-
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 
