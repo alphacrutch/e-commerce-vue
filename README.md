@@ -2,7 +2,8 @@
 This project is an e-commerce website built using Vue.js and Firebase.
 
 ## Components
-'''
+
+```
 <template>
   <header>    
     <h1>E-Commerce TT</h1>
@@ -24,7 +25,8 @@ components:{SearchBar}
 }
 
 </script>
-'''
+```
+
 ## Project setup
 ```
 npm install
